@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Document</title>
-    <link rel='stylesheet' href="singin.css">
-    <link rel='stylesheet' href="all.css">
-    <link rel='stylesheet' href='all.min.css'>
+    <title>Planta - Sign in</title>
+    <link rel='stylesheet' href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../remixIcons/remixicon.css">
+    <link rel='stylesheet' href="../stylesheets/signin.css">
+    <link rel='stylesheet' href='../fontawesome/css/all.min.css'>
 </head>
-
 <body>
+    
+    <?php
+        require_once("header.php");
+    ?>
 
     <div class="login-form-container">
-        <div id="close-login-btn" class="fas fa-times"></div>
-        <form action="">
-            <h3> Sing in </h3>
-            <span> Username</span>
-            <input type="email" name="" id="" class="box" placeholder="Enter your email ">
-            <span>password</span>
-            <input type="password" name=" " id=" " class="box" placeholder="Enter your password ">
-            <div class="checkbox">
-                <input type="checkbox" name="" id="remember-me">
-                <label for="remember-me"> remember me</label>
+        <form action="signin.php" method="post">
+            <h3> Sign in </h3>
+            <div>
+                <span>Email</span>
+                <input type="email" name="email" id="" class="box" placeholder="Enter your email ">
             </div>
-            <input type="submit" value="sing in" class="btn">
-            <p>forget password ?<a href=""> click here</a></p>
-            <p>create an account<a href=""> create one </a></p>
+            <div>
+                <span>Password</span>
+                <input type="password" name="password" id=" " class="box" placeholder="Enter your password ">
+            </div>
+            <input type="submit" value="Sign in" class="btn">
+            <p>Don't have account? <a href="signup.php">Create one</a></p>
         </form>
     </div>
 </body>
-
 </html>

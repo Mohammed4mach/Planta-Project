@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+*::-moz-selection {
+  color: #fffe;
+  background-color: #3a9;
+}
+
+*::selection {
+  color: #fffe;
+  background-color: #3a9;
+}
+
+body {
+  background-color: #dcffb9;
+}
+
+a {
+  color: #39a;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px 1fr 69px;
+      grid-template-columns: 60px 1fr 69px;
+  background-color: #beff7d;
+}
+
+header > * {
+  padding: 5px;
+  margin: 3px;
+  font-size: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #toggle-nav {
+  display: none;
+}
+
+header #toggle-nav:checked + label span {
+  color: rgba(40, 183, 82, 0.9);
+}
+
+header #toggle-nav:checked ~ nav {
+  width: 175px;
+}
+
+header label {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #444;
+  font-size: 32px;
+}
+
+header .logo {
+  color: #28b752;
+}
+
+header .logo > *::-moz-selection {
+  color: #28b752;
+  background-color: #beff7d;
+}
+
+header .logo > *::selection {
+  color: #28b752;
+  background-color: #beff7d;
+}
+
+header .logo span {
+  color: rgba(40, 183, 82, 0.8);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 16px;
+}
+
+header .logo span::-moz-selection {
+  color: rgba(40, 183, 82, 0.8);
+}
+
+header .logo span::selection {
+  color: rgba(40, 183, 82, 0.8);
+}
+
+header .user-prime {
+  width: 50px;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #28b752;
+  border-radius: 50%;
+  background-color: #fffe;
+  color: #555;
+  font-size: 25px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #bee19b;
+  height: 100%;
+  font-size: 23px;
+}
+
+nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+nav a li {
+  margin-left: 5px;
+}
+
+article {
+  width: calc(100% - 180px);
+}
+/*# sourceMappingURL=controlPanel.css.map */

@@ -1,0 +1,123 @@
+.login-form-container{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    background:rgba(255,255,255,.9);
+    height: 100%;
+    width: 100%;
+}
+.login-form-container form{
+    background:#fff;
+    border:.1rem solid rgba(0,0,0,.1);
+    width:500px;
+    padding:2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius:.5rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form-container form *:focus {
+    outline: 2px solid #27ae60;
+}
+.login-form-container form h3{
+    font-size:2.5rem;
+    text-transform: uppercase;
+    color:#444;
+    text-align: center;
+}
+.login-form-container form span{
+    display: block;
+    font-size:1.5rem;
+    padding-top: 1rem;
+    margin: auto;
+}
+.login-form-container form div {
+    width: 94%;
+}
+.login-form-container form div .box{
+    width: 100%;
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    border:.1rem solid rgba(22, 10, 10, 0.1) ;
+    padding: 1rem 1.2rem;
+    color:#444;
+    text-transform: none;
+}
+.login-form-container form .checkbox{
+    display:flex;
+    align-items: center;
+    gap: .5rem;
+    padding:1rem 0; 
+    
+}
+.login-form-container form .checkbox label{
+    font-size:1.5rem;
+    color:#666;
+    cursor:pointer;
+
+}
+.login-form-container form .btn{
+    text-align:center;
+    margin: 1.5rem 0;
+    width: 50%;
+    font-size: 1.6rem;
+    padding: 10px;
+    color: #fff;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 3px 15px 8px 0;
+}
+.login-form-container form p{
+    padding-top: .8rem;
+    color:#666;
+    font-size:1.5rem;
+}
+.login-form-container form p a{
+    color:#27ae60;
+    text-decoration:underline;
+}
+.login-form-container #close-login-btn{
+    position:absolute;
+    top:1.5rem; right:2.5rem;
+    font-size:5rem;
+    color:#444;
+    cursor: pointer;
+}
+ .birthDate select
+{
+    width: 95px;
+    height: 30px;
+    margin: 5px;
+    background-color: #27ae60;
+    color: aliceblue;
+    font-size: 18px;
+    border: 1px solid #38bf71;
+    border-radius: 9px;
+}
+
+.gender .male
+{
+    float: left;
+    width: 23%;
+    background-color: #27ae60;
+    color: #fff;
+    margin: 5px;
+    padding: 3px;
+    margin: 3px 13px 3px 3px;
+    border: 1px solid #38bf71;
+    border-radius: 7px;
+    text-align: center;
+}
+.gender
+{
+    margin: 7px 3%;
+}
+
+.gender > label
+{
+    display: block;
+    margin: 0 0 4px;
+}

@@ -31,3 +31,14 @@
 
         return $sanitized;
     }
+
+
+// Unique id function generator
+    function genId($length) {
+        $min = (int)(0.1 * (10**$length));
+        $max = (int)(0.99999999999 * (10**$length));
+        $random = rand($min, $max);
+        return $random;
+    }
+
+echo genID(11);

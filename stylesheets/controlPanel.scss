@@ -1,0 +1,130 @@
+$mainColor: rgb(190, 255, 125);
+$secondColor: rgb(40, 183, 82);
+$backgroundColor: rgb(220, 255, 185);
+// Green degree: #37fa8a  #5cc312  #3102ff  #46f007  #83f379
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    &::selection 
+    {
+        color: #fffe;
+        background-color: #3a9;
+    }
+}
+
+body { background-color: $backgroundColor; }
+
+a
+{
+    color: #39a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover
+    { color: #fff; }
+}
+
+header
+{
+    display: grid;
+    grid-template-columns: 60px 1fr 69px;
+    background-color: $mainColor;
+
+    > *
+    {
+        padding: 5px;
+        margin: 3px;
+        font-size: 23px;
+        display: flex;
+        align-items: center;
+    }
+
+    #toggle-nav
+    {
+        display: none;
+
+        &:checked {
+            + label span
+            {
+                color: rgba($secondColor, 0.9);
+            }
+            
+            ~ nav
+            {
+                width: 175px;
+            }
+        }
+    }
+
+    label 
+    {
+        justify-content: center;
+        color: #444;
+        font-size: 32px;
+    }
+
+    .logo
+    {
+        color: $secondColor;
+
+        > *::selection
+        {
+            color: $secondColor;
+            background-color: $mainColor;
+        }
+
+        span
+        {
+            color: rgba($secondColor, 0.8);
+            align-self: flex-end;
+            font-size: 16px;
+            &::selection { color: rgba($secondColor, 0.8) }
+        }
+    }
+
+    .user-prime
+    {
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $secondColor;
+        border-radius: 50%;
+        background-color: #fffe;
+        color: #555;
+        font-size: 25px;
+    }
+}
+
+main
+{
+    display: flex;
+}
+
+nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(190, 225, 155);
+    height: 100%;
+    font-size: 23px;
+
+    a
+    {
+        display: flex;
+        margin: 10px 0;
+        li { margin-left: 5px }
+    }
+
+}
+
+article
+{
+    $wid: 180px;
+    width: calc(100% - #{$wid});
+
+}

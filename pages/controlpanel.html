@@ -3,14 +3,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../stylesheets/controlPanel.css">
+
     <title>Planta Admin Panel</title>
 </head>
 <body>
     <header>
-        <span class=""></span>
+        <input type="checkbox" id="toggle-nav">
+        <label for="toggle-nav">
+            <span class="fas fa-bars menu"></span>
+        </label>
         <div class="logo">
-            
+            <h2>Planta</h2>
+            <span>Admin Panel</span>
+        </div>
+        <div class="user-prime">
+            <span class="fas fa-user"></span><!-- Admin info -->
         </div>
     </header>
+    
+    <main>
+        <nav>
+            <ul>
+                <a href="#users-panel"><span class="fas fa-users"></span><li id="li-user">Users</li></a>
+                <a href="#plants-panel"><span class="fas fa-seedling"></span><li id="li-plant">Plants</li></a>
+                <a href="#articles-panel"><span class="fas fa-newspaper"></span><li id="li-article">Articles</li></a>
+            </ul>
+        </nav>
+
+        <article>
+            <section id="users-panel">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>E-mail</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th class="fas fa-star fav"></th>
+                    </thead>
+                    <!--
+                        Script will print info. here
+                    -->
+                </table>
+            </section>
+
+            <section id="plants-panel">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Articles</th>
+                        <th>Interested Users</th>
+                    </thead>
+                    <!--
+                        Script will print info. here
+                    -->
+                </table>
+            </section>
+
+            <section id="articles-panel">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>About</th>
+                        <th>Likes</th>
+                    </thead> 
+                <!--
+                    Script will print info. here
+                -->
+                </table>
+            </section>
+    </main>
 </body>
 </html>
