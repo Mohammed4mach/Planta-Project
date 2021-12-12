@@ -1,3 +1,35 @@
+<?php
+
+/*
+    Your Tasks are:
+- Take Inputs from user then sanitize it using sanInput()
+- Authentication:
+   Using executeSQL($connection, $sql, $type, $parameters) function:
+    * Check if there is email in 'plantadb' equals to input
+    * If there is, echo 'There is an email with that address'
+    * If not, Check if the password != confirm_password
+    * If true, echo 'The password is not identical with confirm password'
+    * If not, generate user_id using genId($length), where $length = 9
+    * Encrypt password
+    * Define variable refer to date of creation
+    * Insert all data into users table, where columns is (user_id, username, email, password, gender, birthdate, create_date)
+- If true, create cookies called 'planta_user_id' and store user_id in it with expire duration 2 weeks
+- Then redirect user to home.php 
+- Carefully test your work against 'plantadb'
+
+$ After finishing each task put ✔ in front of it $
+
+____For any help to use functions in functionality.php contact me____
+
+With my best wishes...
+    Muhammed Abdullsalam
+
+
+*/
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +37,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planta - Signup</title>
+    <link rel="icon" href="../assets/images/leaf-line.png">
     <link rel='stylesheet' href="../stylesheets/main.css">
     <link rel="stylesheet" href="../remixIcons/remixicon.css">
     <link rel="stylesheet" href="../stylesheets/signin.css">
@@ -19,13 +52,17 @@
         <form action="signin.php" method="post">
             <h3> Sign up </h3>
             <div>
+                <span>Username</span>
+                <input type="text" name="username"  class="box" placeholder="Enter your email" required pattern="\w*[_-]*">
+            </div>
+            <div>
                 <span>Email</span>
-                <input type="email" name="email"  class="box" placeholder="Enter your email ">
+                <input type="email" name="email"  class="box" placeholder="Enter your email" required>
             </div>
             <div>
                 <span>Password</span>
-                <input type="password" name="password"  class="box" placeholder="Enter your password "><br><br>
-                <input type="text" name="" id="" class="box" placeholder="Confirm your password">
+                <input type="password" name="password"  class="box" placeholder="Enter your password" required minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+"><br>
+                <input type="password" name="confirm_password" class="box" placeholder="Confirm your password" required minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+">
             </div>
             <div>
                 <span>Date of birth</span>
@@ -215,6 +252,7 @@
 
             </div>
             <input type="submit" value="sing up" class="btn">
+        </form>
     </div>
 </body>
 </html>

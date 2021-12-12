@@ -292,3 +292,7 @@ section{
     }
      
 }
+
+input:invalid {
+  border: red solid 3px;
+}

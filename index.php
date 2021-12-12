@@ -7,6 +7,7 @@
         
         <title>Planta</title>
 
+        <link rel="icon" href="assets/images/leaf-line.png">
         <link rel="stylesheet" href="stylesheets/swiper-bundle.min.css"/>
         <link rel='stylesheet' href="stylesheets/main.css">
         <link rel='stylesheet' href='fontawesome/css/all.min.css'>

@@ -40,5 +40,3 @@
         $random = rand($min, $max);
         return $random;
     }
-
-echo genID(11);
