@@ -1,6 +1,9 @@
 $mainColor: rgb(190, 255, 125);
 $secondColor: rgb(40, 183, 82);
 $backgroundColor: rgb(220, 255, 185);
+$green:#3A9943;
+$color:#56c596;
+$color-2:#f4f1e9;
 // Green degree: #37fa8a  #5cc312  #3102ff  #46f007  #83f379
 
 *
@@ -8,15 +11,13 @@ $backgroundColor: rgb(220, 255, 185);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
-    &::selection 
-    {
-        color: #fffe;
-        background-color: #3a9;
-    }
+    overflow: auto;
 }
 
-body { background-color: $backgroundColor; }
+body
+{
+    background-color: $backgroundColor;
+}
 
 a
 {
@@ -27,17 +28,30 @@ a
     { color: #fff; }
 }
 
+
+.header-1
+{
+    display: none;
+}
+
+.header-2 .search-bar-container
+{
+    display: none;
+}
+
 header
 {
     display: grid;
+    align-items: center;
     grid-template-columns: 60px 1fr 69px;
     background-color: $mainColor;
+    padding: 0 10px;
 
     > *
     {
         padding: 5px;
         margin: 3px;
-        font-size: 23px;
+        font-size: 17px;
         display: flex;
         align-items: center;
     }
@@ -46,29 +60,44 @@ header
     {
         display: none;
 
-        &:checked {
+        &:checked
+        {
+            + label
+            {
+                background-color: rgba(#444, 0.07);
+                border-radius: 0;
+            }
             + label span
             {
-                color: rgba($secondColor, 0.9);
-            }
-            
-            ~ nav
-            {
-                width: 175px;
+                color: $secondColor;
             }
         }
     }
 
     label 
     {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: $secondColor;
         justify-content: center;
-        color: #444;
-        font-size: 32px;
+        color: rgba(#444, 0.5);
+        font-size: 25px;
+        transition: background-color 0.2s ease,
+                    border-radius 0.2s ease;
+        cursor: pointer;
+
+        > * 
+        {
+            transition: color 0.3s ease;
+        }
     }
 
     .logo
     {
         color: $secondColor;
+        margin-left: 30px;
+        cursor: default;
 
         > *::selection
         {
@@ -80,51 +109,248 @@ header
         {
             color: rgba($secondColor, 0.8);
             align-self: flex-end;
-            font-size: 16px;
+            font-size: smaller;
             &::selection { color: rgba($secondColor, 0.8) }
         }
     }
 
     .user-prime
     {
-        width: 50px;
-        height: 50px;
+        width: 65px;
+        height: 65px;
         justify-content: center;
         align-items: center;
-        border: 2px solid $secondColor;
-        border-radius: 50%;
-        background-color: #fffe;
         color: #555;
         font-size: 25px;
+
+        img
+        {
+            width: 100%;
+            height: 100%;
+            border: 2px solid $secondColor;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+
+    .label, .user-prime
+    {
+        flex-shrink: 1;
     }
 }
+
 
 main
 {
     display: flex;
+    height: -webkit-fill-available;
 }
 
 nav
 {
+    position: relative;
+    width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(190, 225, 155);
-    height: 100%;
-    font-size: 23px;
+    background-color: rgba($green, 0.94);
+    font-size: 25px;
+    z-index: 1;
+    transition: all 0.5s linear;
+
+    ul
+    {
+        position: fixed;
+        top: 151px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     a
     {
         display: flex;
-        margin: 10px 0;
-        li { margin-left: 5px }
-    }
+        margin: 18px 0;
+        color: $color;
+        li { margin-left: 7px }
 
+        &.active
+        {
+            color: #fff;
+        }
+
+        &[href="#delete-panel"]:hover,
+        &[href="#delete-panel"].active
+        {
+            color: #dd0000;
+        }
+        // &[href="#update-panel"]:hover
+        // {
+        //     color: #ffff00;
+        // }
+        &[href="#create-panel"]:hover,
+        &[href="#create-panel"].active
+        {
+            color: #00ff00;
+        }
+    }
 }
 
 article
 {
-    $wid: 180px;
-    width: calc(100% - #{$wid});
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    height: -webkit-fill-available;
+    flex-grow: 1;
+    padding: 10px;
 
+    section
+    {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        position: relative;
+        right: 3000px;
+        transition: all 0.5s linear;
+        z-index: 1000;
+        padding: 5px;
+
+        &:target
+        {
+            right: 0;
+        }
+
+        &#articles-panel table th
+        {
+                width: 230px;
+        }
+
+        > *
+        {
+            margin: auto;
+        }
+
+        h2
+        {
+            font-size: 27px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: $secondColor;
+        }
+
+        table
+        {
+            padding: 20px;
+            background-color: rgba(50, 80, 50, 0.2);
+            border-radius: 10px;
+
+
+            th.fas.fa-star.fav
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: gold;
+                height: 50px;
+            }
+
+            tr
+            {
+                height: 50px;
+            }
+
+            th
+            {
+                color: #000d
+            }
+
+            td
+            {
+                width: 220px;
+                text-align: center;
+                color: #000a
+            }
+        }
+    }
+}
+
+.subsection
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    // .class
+    // {
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: flex-end;
+    //     padding: 5px;
+    //     margin-bottom: 20px;
+
+    //     select
+    //     {
+    //         padding: 4px;
+    //         font-size: 16px;
+    //         background-color: #dcb;
+    //         color: #234;
+    //     }
+    // }
+
+    > div
+    {
+        margin-bottom: 70px;
+        padding: 5px;
+
+        form
+        {
+            display: grid;
+
+        }
+        input,
+        textarea
+        {
+            width: 270px;
+            padding: 7px;
+            font-size: 14px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        input[type="submit"]
+        {
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #008f31;
+            color: #fff;
+            margin-top: 20px;
+            padding: 14px;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+
+            &[value="Delete"]
+            {
+                background-color: #dd0000;
+                color: #eef;
+                &:hover
+                {
+                    background-color: #ee0000;
+                }
+                &:active
+                {
+                    background-color: #cc0000;
+                }
+            }
+
+            &:hover
+            {
+                background-color: #119f42;
+                text-shadow: 1px 1px 30px #fff9;
+            }
+            
+            &:active
+            {
+                background-color: #007e20;
+            }
+        }
+    }
 }

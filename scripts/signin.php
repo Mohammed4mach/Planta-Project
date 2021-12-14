@@ -1,6 +1,7 @@
 <?php
 
 /*
+
     Your Tasks are:
 - Take Inputs from user then sanitize it using sanInput()
 - Authentication:
@@ -19,6 +20,7 @@ ____For any help to use functions in functionality.php contact me____
 
 With my best wishes...
     Muhammed Abdullsalam
+
 */
 
 
@@ -33,8 +35,8 @@ With my best wishes...
     <title>Planta - Sign in</title>
     <link rel="icon" href="../assets/images/leaf-line.png">
     <link rel='stylesheet' href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../stylesheets/signin.css">
     <link rel="stylesheet" href="../remixIcons/remixicon.css">
-    <link rel='stylesheet' href="../stylesheets/signin.css">
     <link rel='stylesheet' href='../fontawesome/css/all.min.css'>
 </head>
 <body>
@@ -44,7 +46,7 @@ With my best wishes...
     ?>
 
     <div class="login-form-container">
-        <form action="signup.php" method="post">
+        <form action="signin.php" method="post">
             <h3> Sign in </h3>
             <div>
                 <span>Email</span>
@@ -58,5 +60,6 @@ With my best wishes...
             <p>Don't have account? <a href="signup.php">Create one</a></p>
         </form>
     </div>
+    <script src="change_logo_path.js"></script>
 </body>
 </html>

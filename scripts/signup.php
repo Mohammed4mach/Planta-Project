@@ -1,6 +1,7 @@
 <?php
 
 /*
+
     Your Tasks are:
 - Take Inputs from user then sanitize it using sanInput()
 - Authentication:
@@ -24,7 +25,6 @@ ____For any help to use functions in functionality.php contact me____
 With my best wishes...
     Muhammed Abdullsalam
 
-
 */
 
 
@@ -39,8 +39,8 @@ With my best wishes...
     <title>Planta - Signup</title>
     <link rel="icon" href="../assets/images/leaf-line.png">
     <link rel='stylesheet' href="../stylesheets/main.css">
-    <link rel="stylesheet" href="../remixIcons/remixicon.css">
     <link rel="stylesheet" href="../stylesheets/signin.css">
+    <link rel="stylesheet" href="../remixIcons/remixicon.css">
     <link rel='stylesheet' href='../fontawesome/css/all.min.css'>
 </head>
 <body>
@@ -49,11 +49,11 @@ With my best wishes...
     ?>
 
     <div class="login-form-container">
-        <form action="signin.php" method="post">
+        <form action="signup.php" method="post">
             <h3> Sign up </h3>
             <div>
                 <span>Username</span>
-                <input type="text" name="username"  class="box" placeholder="Enter your email" required pattern="\w*[_-]*">
+                <input type="text" name="username"  class="box" placeholder="Enter a username" required pattern="\w*[_-]*">
             </div>
             <div>
                 <span>Email</span>
@@ -241,11 +241,11 @@ With my best wishes...
                     <span>Gender</span>
                     <div class="male">
                         <label><i class="fa fa-male"></i> Male</label>
-                        <input name="gender" type="radio" value="male" required >
+                        <input name="gender" type="radio" value="M" required >
                     </div>
                     <div class="fe male">
                         <label><i class="fa fa-female"></i> Female</label>
-                        <input name="gender" type="radio" value="female" required>
+                        <input name="gender" type="radio" value="F" required>
                     </div>
                     
                     <div class="clear"></div>
@@ -254,5 +254,6 @@ With my best wishes...
             <input type="submit" value="sing up" class="btn">
         </form>
     </div>
+    <script src="change_logo_path.js"></script>
 </body>
 </html>

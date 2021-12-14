@@ -24,7 +24,7 @@
         <nav class="navbar">
             <a href="#home"> Home</a>
             <a href="#category"> Category</a>
-            <a href="#fertlize"> fertlize</a>
+            <a href="#fertilize"> Fertilize</a>
             <a href="#contact"> Contact</a>
         </nav>
         <div class="icons">
@@ -36,9 +36,9 @@
     <section id="home" class="home">
         <div class="row">
             <div class="content">
-                <h3>Upto 70% off</h3>
-                <p>Decorate your Home now , Make your home Green </p>
-                <a href="#" class="btn1"> shop now</a>
+                <h3>Upto 70% Off</h3>
+                <p>Decorate Your Home Now , Make Your Home Green </p>
+                <a href="#" class="btn1">Shop Now</a>
             </div>
 
             <div class="swiper plants-slider">
