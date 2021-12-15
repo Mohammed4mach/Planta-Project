@@ -9,7 +9,7 @@
     * Check if there is email in 'plantadb' equals to input
     * Retrieve the password in same row
     * Decrypt it
-    * If there is an email check if the password in same row match the input
+    * If there is an email check if the password in same row match the input by password_verify()
 - If true, create cookies called 'planta_user_id' and store user_id in it with expire duration 2 weeks
 - Then redirect user to home.php 
 - Carefully test your work against 'plantadb'

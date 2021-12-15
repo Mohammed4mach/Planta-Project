@@ -11,9 +11,11 @@
     * If not, Check if the password != confirm_password
     * If true, echo 'The password is not identical with confirm password'
     * If not, generate user_id using genId($length), where $length = 9
-    * Encrypt password
-    * Define variable refer to date of creation
-    * Insert all data into users table, where columns is (user_id, username, email, password, gender, birthdate, create_date)
+    * Check if there is user id with same value in 'plantadb'
+    * If true,  generate another one
+- Encrypt password using password_hash()
+- Define variable refer to date of creation
+- Insert all data into users table, where columns is (user_id, username, email, password, gender, birthdate, create_date)
 - If true, create cookies called 'planta_user_id' and store user_id in it with expire duration 2 weeks
 - Then redirect user to home.php 
 - Carefully test your work against 'plantadb'
