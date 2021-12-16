@@ -275,7 +275,6 @@
                     <div id="user-create">
                         <h2>Create User</h2>
                         <form action="controlpanel.php" name="create-user" method="post">
-                            <input type="number" name="user_id" placeholder="ID" max="999999999" min="1" required>
                             <input type="text" name="username" placeholder="Username" pattern="\w*[_-]*" required>
                             <input type="email" name="email" placeholder="E-mail" required>
                             <input type="password" name=" password" placeholder="Password" minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+" required>
@@ -289,7 +288,6 @@
                     <div id="plant-create">
                         <h2>Create Plant</h2>
                         <form action="controlpanel.php" name="create-plant" method="post">
-                            <input type="number" name="plant_id" placeholder="ID" max="999999999" min="1" required>
                             <input type="text" name="plant_name" placeholder="Plant Name" required>
                             <textarea name="info" rows="3" cols="30" placeholder="Information" required></textarea>
                             <input type="submit" value="Create">
@@ -299,7 +297,6 @@
                     <div id="article-create">
                         <h2>Create Article</h2>
                         <form action="controlpanel.php" name="create-article" method="post">
-                            <input type="number" name="article_id" placeholder="ID" max="999999999" min="1" required>
                             <input type="text" name="title" placeholder="Title" required>
                             <textarea name="content" rows="3" cols="30" placeholder="Content" required></textarea>
                             <input type="number" name="plant_id" placeholder="Plant_ID" max="999999999" min="1" required>
