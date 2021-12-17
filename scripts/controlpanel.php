@@ -6,10 +6,10 @@
     $sql = "SELECT * FROM users ORDER BY admin DESC";
     $users_rows = executeSQL($conn, $sql);
 
-    $sql = "SELECT * FROM plants";
+    $sql = "SELECT * FROM plants ORDER BY plant_name ASC";
     $plants_rows = executeSQL($conn, $sql);
 
-    $sql = "SELECT * FROM articles";
+    $sql = "SELECT * FROM articles ORDER BY title ASC";
     $articles_rows = executeSQL($conn, $sql);
 
 ?>
@@ -30,24 +30,9 @@
     <title>Planta - Admin Panel</title>
 </head>
 <body>
-    <div class="header-1">
-        <div class="share">
-            <span>follow us :</span>
-            <a href='#'><i class='fab fa-facebook-f'></i></a>
-            <a href='#'><i class='fab fa-twitter'></i></a>
-            <a href='#'><i class='fab fa-instagram'></i></a>
-            <a href='#'><i class='fab fa-linkedin'></i></a>
-        </div>
-    </div>
-
-    <div class=" header-2">
-        <a href="index.html" class="logo"><i class="ri-leaf-line"></i> Planta</a>
-
-        <form action="" class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="search here...">
-            <label for ="search-bar"><i class="fas fa-search"></i></label>
-        </form>
-    </div>
+    <?php
+        require_once("header.php");
+    ?>
     <header>
         <input type="checkbox" id="toggle-nav" checked>
         <label for="toggle-nav" role="button" onclick="toggleNav()">
@@ -289,6 +274,7 @@
     </main>
 
     <script src="toggle-nav.js"></script>
+    <script src="change_logo_path.js"></script>
     <!-- <script src="highlight_active_link.js"></script> -->
 </body>
 </html>

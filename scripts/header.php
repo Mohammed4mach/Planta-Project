@@ -1,4 +1,3 @@
-<header>
     <div class="header-1">
         <div class="share">
             <span>Follow Us :</span>
@@ -17,4 +16,3 @@
             <label for ="search-bar"><i class="fas fa-search"></i></label>
         </form>
     </div>
-</header>
