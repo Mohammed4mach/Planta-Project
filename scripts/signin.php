@@ -56,10 +56,17 @@ With my best wishes...
                 <span>Password</span>
                 <input type="password" name="password" class="box" placeholder="Enter your password" required minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+">
             </div>
-            <input type="submit" value="Sign in" class="btn">
+            <input type="submit" value="Sign In" class="btn">
             <p>Don't have account? <a href="signup.php">Create one</a></p>
         </form>
     </div>
     <script src="change_logo_path.js"></script>
 </body>
 </html>
+
+<?php
+
+// Close db Connection
+    mysqli_close($conn);
+
+?>

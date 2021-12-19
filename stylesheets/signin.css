@@ -86,7 +86,7 @@
     color:#444;
     cursor: pointer;
 }
- .birthDate select
+ .birthDate
 {
     width: 95px;
     height: 30px;
@@ -96,6 +96,20 @@
     font-size: 18px;
     border: 1px solid #38bf71;
     border-radius: 9px;
+    padding: 5px;
+}
+
+input[name="birth_date"]
+{
+    width: 95px;
+    height: 30px;
+    margin: 5px;
+    background-color: #27ae60;
+    color: aliceblue;
+    font-size: 18px;
+    border: 1px solid #38bf71;
+    border-radius: 9px;
+    padding: 5px;
 }
 
 .gender .male

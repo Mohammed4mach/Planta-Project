@@ -64,6 +64,7 @@ html{
     background:var(--green);
     font-size :1.7rem;
     font-weight: 500;
+    transition: background-color 0.2s ease;
 }
 .btn:hover{
     background:#444;
@@ -198,14 +199,17 @@ section{
     text-transform:capitalize;
     color: #ddd;
 }
-.header-2 .search-bar-container #search-bar label{
+.header-2 .search-bar-container label{
     color:#fff;
     cursor: pointer;
-    font-size: 5rem;
-    padding:0 .5rem;
+    font-size: 16px;
 }
-.header-2 .search-bar-container #search-bar  label:hover{
+.header-2 .search-bar-container label:hover{
     color:yellow;
+}
+#search-submit
+{
+    display: none;
 }
 .header-3 .navbar {
     margin: auto

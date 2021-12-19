@@ -11,8 +11,9 @@
     <div class=" header-2">
         <a href="index.php" class="logo"><i class="ri-leaf-line"></i> Planta</a>
 
-        <form action="" class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="search here...">
-            <label for ="search-bar"><i class="fas fa-search"></i></label>
+        <form action="search.php" method="post" class="search-bar-container">
+            <input type="search" name="search" id="search-bar" placeholder="search here...">
+            <label for ="search-submit"><i class="fas fa-search"></i></label>
+            <input type="submit" id="search-submit">
         </form>
     </div>
