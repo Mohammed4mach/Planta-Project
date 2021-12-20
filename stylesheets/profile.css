@@ -5,6 +5,8 @@
 
 
 .header-1{
+=======
+.top{
     background-color: rgba(225, 225,225.9);
     width:100%;
     height: 30%;
@@ -38,6 +40,25 @@
     position:sticky;
     top: 20%;
     
+=======
+    margin:0 AUTO 20PX AUTO;/*Moha is here*/
+}
+h6{
+    display: inline;
+    margin-right: 10px;
+
+}
+.profil{
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 150px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-style: color rgb(255, 253, 253);
+    border-radius: 20px;
+   
 }
 
 
@@ -63,6 +84,14 @@
 .mail{
     font-size:20px;
     margin-top: 50px;
+}
+}
+.m{
+    float:center;
+    margin-left:200px;
+    display: flex;
+    display: block;
+    
 }
 
 

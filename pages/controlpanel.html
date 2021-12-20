@@ -3,9 +3,389 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planta Admin Panel</title>
+    
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../remixIcons/remixicon.css">
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../stylesheets/controlPanel.css">
+    <link rel="icon" href="../assets/images/leaf-line.png">
+
+    <title>Planta - Admin Panel</title>
 </head>
 <body>
-    
+    <div class="header-1">
+        <div class="share">
+            <span>follow us :</span>
+            <a href='#'><i class='fab fa-facebook-f'></i></a>
+            <a href='#'><i class='fab fa-twitter'></i></a>
+            <a href='#'><i class='fab fa-instagram'></i></a>
+            <a href='#'><i class='fab fa-linkedin'></i></a>
+        </div>
+    </div>
+
+    <div class=" header-2">
+        <a href="index.html" class="logo"><i class="ri-leaf-line"></i> Planta</a>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for ="search-bar"><i class="fas fa-search"></i></label>
+        </form>
+    </div>
+    <header>
+        <input type="checkbox" id="toggle-nav" checked>
+        <label for="toggle-nav" role="button" onclick="toggleNav()">
+            <span class="fas fa-bars menu"></span>
+        </label>
+        <div class="logo">
+            <h2><i class="ri-leaf-line"></i> Planta</h2>
+            <span> Admin Panel</span>
+        </div>
+        <div class="user-prime">
+            <a href="profile.html"><img src="../uploads/users-img/admin.png" alt="User image"></a><!-- Admin info -->
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <ul>
+                <a href="#users-panel"><span class="ri-user-5-fill"></span><li id="li-user">Users</li></a>
+                <a href="#plants-panel"><span class="ri-plant-fill"></span><li id="li-plant">Plants</li></a>
+                <a href="#articles-panel"><span class="ri-article-fill"></span><li id="li-article">Articles</li></a>
+                <a href="#create-panel"><span class="ri-user-add-fill"></span><li id="li-create">Create</li></a>
+                <a href="#update-panel"><span class="fas fa-edit"></span><li id="li-create">Update</li></a>
+                <a href="#delete-panel"><span class="ri-delete-bin-5-fill"></span><li id="li-delete">Delete</li></a>
+            </ul>
+        </nav>
+
+        <article>
+            <section id="users-panel">
+                <h2>Users</h2>
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>E-mail</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th class="fas fa-star fav"></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Admin</td>
+                            <td>hmoomh15@gmail.com</td>
+                            <td>M</td>
+                            <td>22</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>121321412</th>
+                            <td>Moasd</td>
+                            <td>adomh23@gmail.com</td>
+                            <td>M</td>
+                            <td>16</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <th>957483984</th>
+                            <td>Vera</td>
+                            <td>ver123@gmail.com</td>
+                            <td>F</td>
+                            <td>19</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <th>684584955</th>
+                            <td>Kael</td>
+                            <td>kealo65@gmail.com</td>
+                            <td>M</td>
+                            <td>25</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <th>584393984</th>
+                            <td>Petra</td>
+                            <td>Peta847@gmail.com</td>
+                            <td>F</td>
+                            <td>24</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <th>495484938</th>
+                            <td>Liam</td>
+                            <td>LimonGuru@gmail.com</td>
+                            <td>M</td>
+                            <td>30</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <th>977421983</th>
+                            <td>Sal_Khan</td>
+                            <td>SalmanKh23@gmail.com</td>
+                            <td>M</td>
+                            <td>37</td>
+                            <td>20</td>
+                        </tr>
+                        <!--
+                            Script will print info. here
+                        -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="plants-panel">
+                <h2>Plants</h2>
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Articles</th>
+                        <th>Interested Users</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>149224105</th>
+                            <td>African Violets</td>
+                            <td>5</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th>223578937</th>
+                            <td>Sansevieria</td>
+                            <td>6</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <th>237049600</th>
+                            <td>Lemon Cypress</td>
+                            <td>9</td>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <th>284127511</th>
+                            <td>Jasmine Plant</td>
+                            <td>47</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <th>299428825</th>
+                            <td>Fragrant Plant</td>
+                            <td>13</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <th>318646286</th>
+                            <td>Coleus</td>
+                            <td>3</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <th>349558998</th>
+                            <td>Peace Lily Plant</td>
+                            <td>7</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <th>354883562</th>
+                            <td>Mint Plant</td>
+                            <td>10</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <th>428789010</th>
+                            <td>Sansevieria Trifasciata</td>
+                            <td>2</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <th>447280421</th>
+                            <td>Monstera Deliciosa</td>
+                            <td>28</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <th>463577098</th>
+                            <td>Gardenia Jasminoides</td>
+                            <td>18</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <th>470633194</th>
+                            <td>Kalanchoe Plant</td>
+                            <td>17</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <th>492038462</th>
+                            <td>Dieffenbachia</td>
+                            <td>24</td>
+                            <td>62</td>
+                        </tr>
+                        <tr>
+                            <th>531476881</th>
+                            <td>Pansies</td>
+                            <td>7</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <th>570590438</th>
+                            <td>Bamboo</td>
+                            <td>25</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <th>597575488</th>
+                            <td>Aloe Vera</td>
+                            <td>5</td>
+                            <td>34</td>
+                        </tr>
+                        <!--
+                            Script will print info. here
+                        -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="articles-panel">
+                <h2>Articles</h2>
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>About</th>
+                        <th>Likes</th>
+                    </thead>
+                    <tbody>
+                        <!--
+                            Script will print info. here
+                        -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="create-panel">
+                <div class="subsection">
+                    <!-- <div class="class">
+                        <select>
+                            <option value="u" onselect="">User</option>
+                            <option value="p">Plant</option>
+                            <option value="a">Article</option>
+                        </select>
+                    </div> -->
+                    <div id="user-create">
+                        <h2>Create User</h2>
+                        <form action="controlpanel.php" name="create-user" method="post">
+                            <input type="text" name="username" placeholder="Username" pattern="\w*[_-]*" required>
+                            <input type="email" name="email" placeholder="E-mail" required>
+                            <input type="password" name=" password" placeholder="Password" minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+" required>
+                            <input type="text" name="gender" placeholder="Gender" maxlength="1" pattern="[FM]" required>
+                            <input type="date" name="birth_date" required>
+                            <input type="number" name="admin" placeholder="Admin" min="0" max="1" required>
+                            <input type="submit" value="Create">
+                        </form>
+                    </div>
+
+                    <div id="plant-create">
+                        <h2>Create Plant</h2>
+                        <form action="controlpanel.php" name="create-plant" method="post">
+                            <input type="text" name="plant_name" placeholder="Plant Name" required>
+                            <textarea name="info" rows="3" cols="30" placeholder="Information" required></textarea>
+                            <input type="submit" value="Create">
+                        </form>
+                    </div>
+
+                    <div id="article-create">
+                        <h2>Create Article</h2>
+                        <form action="controlpanel.php" name="create-article" method="post">
+                            <input type="text" name="title" placeholder="Title" required>
+                            <textarea name="content" rows="3" cols="30" placeholder="Content" required></textarea>
+                            <input type="number" name="plant_id" placeholder="Plant_ID" max="999999999" min="1" required>
+                            <input type="submit" value="Create">
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="update-panel">
+                <div class="subsection">
+                    <!-- <div class="class">
+                        <a href="#user-update">User</a>
+                        <a href="#plant-update">Plant</a>
+                        <a href="#article-update">Article</a>
+                    </div> -->
+                    <div id="user-update">
+                        <h2>Update User</h2>
+                        <form action="controlpanel.php" name="update-user" method="post">
+                            <input type="number" name="user_id" placeholder="ID" max="999999999" min="1" required>
+                            <input type="text" name="username" placeholder="Username" pattern="\w*[_-]*" required>
+                            <input type="email" name="email" placeholder="E-mail" required>
+                            <input type="password" name=" password" placeholder="Password" minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+" required>
+                            <input type="text" name="gender" placeholder="Gender" maxlength="1" pattern="[FM]" required>
+                            <input type="date" name="birth_date" required>
+                            <input type="number" name="admin" placeholder="Admin" min="0" max="1" required>
+                            <input type="submit" value="Update">
+                        </form>
+                    </div>
+
+                    <div id="plant-update">
+                        <h2>Update Plant</h2>
+                        <form action="controlpanel.php" name="update-plant" method="post">
+                            <input type="number" name="plant_id" placeholder="ID" max="999999999" min="1" required>
+                            <input type="text" name="plant_name" placeholder="Plant Name" required>
+                            <textarea name="info" rows="3" cols="30" placeholder="Information" required></textarea>
+                            <input type="submit" value="Update">
+                        </form>
+                    </div>
+
+                    <div id="article-update">
+                        <h2>Update Article</h2>
+                        <form action="controlpanel.php" name="update-article" method="post">
+                            <input type="number" name="article_id" placeholder="ID" max="999999999" min="1" required>
+                            <input type="text" name="title" placeholder="Title" required>
+                            <textarea name="content" rows="3" cols="30" placeholder="Content" required></textarea>
+                            <input type="number" name="plant_id" placeholder="Plant_ID" max="999999999" min="1" required>
+                            <input type="submit" value="Update">
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="delete-panel">
+                    <div class="subsection">
+            <!--    <div class="class">
+                        <a href="#user-delete">User</a>
+                        <a href="#plant-delete">Plant</a>
+                        <a href="#article-delete">Article</a>
+                    </div> -->
+                    <div id="user-delete">
+                        <h2>Delete User</h2>
+                        <form action="controlpanel.php" name="delete-user" method="post">
+                            <input type="number" name="user_id" placeholder="ID" max="999999999" min="1" required>
+                            <input type="submit" value="Delete">
+                        </form>
+                    </div>
+
+                    <div id="plant-delete">
+                        <h2>Delete Plant</h2>
+                        <form action="controlpanel.php" name="delete-plant" method="post">
+                            <input type="number" name="plant_id" placeholder="ID" max="999999999" min="1" required>
+                            <input type="submit" value="Delete">
+                        </form>
+                    </div>
+
+                    <div id="article-delete">
+                        <h2>Delete Article</h2>
+                        <form action="controlpanel.php" name="delete-article" method="post">
+                            <input type="number" name="article_id" placeholder="ID" max="999999999" min="1" required>
+                            <input type="submit" value="Delete">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <script src="../scripts/toggle-nav.js"></script>
+    <!-- <script src="../scripts/highlight_active_link.js"></script> -->
 </body>
 </html>

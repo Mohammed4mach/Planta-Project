@@ -1,11 +1,51 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planta - Signin</title>
+    <title>Planta - Sign in</title>
+    <link rel="icon" href="../assets/images/leaf-line.png">
+    <link rel='stylesheet' href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../remixIcons/remixicon.css">
+    <link rel='stylesheet' href="../stylesheets/signin.css">
+    <link rel='stylesheet' href='../fontawesome/css/all.min.css'>
 </head>
 <body>
-    
+    <header>
+    <div class="header-1">
+        <div class="share">
+            <span>Follow Us :</span>
+            <a href='#'><i class='fab fa-facebook-f'></i></a>
+            <a href='#'><i class='fab fa-twitter'></i></a>
+            <a href='#'><i class='fab fa-instagram'></i></a>
+            <a href='#'><i class='fab fa-linkedin'></i></a>
+        </div>
+    </div>
+
+    <div class=" header-2">
+        <a href="index.html" class="logo"><i class="ri-leaf-line"></i> Planta</a>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for ="search-bar"><i class="fas fa-search"></i></label>
+        </form>
+    </div>
+    </header>
+    <div class="login-form-container">
+        <form action="signup.php" method="post">
+            <h3> Sign in </h3>
+            <div>
+                <span>Email</span>
+                <input type="email" name="email" class="box" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <span>Password</span>
+                <input type="password" name="password" class="box" placeholder="Enter your password" required minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+">
+            </div>
+            <input type="submit" value="Sign in" class="btn">
+            <p>Don't have account? <a href="signup.html">Create one</a></p>
+        </form>
+    </div>
 </body>
 </html>
