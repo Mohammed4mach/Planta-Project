@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <?php
 
 /*
@@ -145,4 +143,3 @@ if (isset($_POST['username'])) {
 mysqli_close($conn);
 
 ?>
->>>>>>> Stashed changes
