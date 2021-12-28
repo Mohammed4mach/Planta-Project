@@ -11,7 +11,8 @@
     border:.1rem solid rgba(0,0,0,.1);
     width:500px;
     padding:2rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    /*box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius:.5rem;
     margin: 2rem;
     display: flex;
@@ -66,9 +67,17 @@
     font-size: 1.6rem;
     padding: 10px;
     color: #fff;
+    cursor: pointer;
     background-color: #27ae60;
     border: none;
-    border-radius: 3px 15px 8px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 8px 0 #1c5333 , 0 8px 15px #1c5333;
+}
+.login-form-container form .btn:hover{
+    color: white;
+    background-color:#27ae60 ;
+    box-shadow: 0 5px 0 #1c5333 , 0 5px 15px #29533b ;
 }
 .login-form-container form p{
     padding-top: .8rem;
@@ -86,13 +95,27 @@
     color:#444;
     cursor: pointer;
 }
-
-input[name="birth_date"]
+ .birthDate
 {
+    width: 95px;
+    height: 30px;
     margin: 5px;
     background-color: #27ae60;
     color: aliceblue;
-    font-size: 16px;
+    font-size: 18px;
+    border: 1px solid #38bf71;
+    border-radius: 9px;
+    padding: 5px;
+}
+
+input[name="birth_date"]
+{
+    width: 95px;
+    height: 30px;
+    margin: 5px;
+    background-color: #27ae60;
+    color: aliceblue;
+    font-size: 18px;
     border: 1px solid #38bf71;
     border-radius: 9px;
     padding: 5px;
