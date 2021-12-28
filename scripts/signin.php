@@ -26,7 +26,6 @@ With my best wishes...
 
 ?>
 
-<<<<<<< Updated upstream
 <?php
 
 include "database.php";
@@ -95,7 +94,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 }
 
 ?>
-=======
  <?php
 
   include "database.php";
@@ -166,12 +164,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 ?>
 
 
-
-
-
-
->>>>>>> Stashed changes
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -186,8 +178,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   <link rel='stylesheet' href='../fontawesome/css/all.min.css'>
 </head>
 <body>
-<<<<<<< Updated upstream
-  
   <?php
       require_once("header.php");
   ?>
@@ -211,7 +201,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
       </form>
   </div>
   <script src="change_logo_path.js"></script>
-=======
     
     <?php
         require_once("header.php");
@@ -236,13 +225,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         </form>
     </div>
     <script src="change_logo_path.js"></script>
->>>>>>> Stashed changes
 </body>
 </html>
-
-<?php
-
-// Close db Connection
-  mysqli_close($conn);
-
-?>

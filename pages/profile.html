@@ -4,30 +4,126 @@
     <meta charset="UTF-8" />
     <title>CSS</title>
     <!-- external style -->
-    <link rel="stylesheet" href="css/master.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/main.css"/>
+    <link rel='stylesheet' href='../fontawesome/css/all.min.css'>
+    <link rel="stylesheet" href="../remixIcons/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital@0;1&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital@0;1&family=Vidaloka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/profile.css"/>
+
+
+    <script src="fontawesome/js/all.min.js"></script>
   </head>
   <body>
-    <div class="top">
-      <span class="material-icons">
-        grass
-        </span>
-        <h6>planta</h6>
-      <a href=""> home</a>
-      <a href=""> profil</a>
-      <a href=""> search</a>
+    <header>
+      <div class="header-1">
+          <div class="share">
+              <span>follow us :</span>
+              <a href='#'><i class='fab fa-facebook-f'></i></a>
+              <a href='#'><i class='fab fa-twitter'></i></a>
+              <a href='#'><i class='fab fa-instagram'></i></a>
+              <a href='#'><i class='fab fa-linkedin'></i></a>
+          </div>
+      </div>
+      <div class="header-2">
+          <a href="../index.php" class="logo"><i class="ri-leaf-line"></i> planta</a>
 
-    </div>
-    <div class="profil">
-      <img src="mm.jpg" alt="profil img" class="profil-img">
-      <div class="profil-name">ManarMagdy</div>
-      <div class="profil-detalis">
-       <span calss="num">5</span> <span clas="num">10</span>
+          <form action="" class="search-bar-container">
+              <input type="search" id="search-bar" placeholder="search here...">
+              <label for ="search-bar"><i class="fas fa-search"></i></label>
+          </form>
       </div>
-      <div class="k">
-        <span class="f">following</span> <span class="f">followers</span>
+    </header>
+      <div class="container">
+        <div class="profil">
+          <img src="../assets/images/israa1.jfif" alt="profil img" class="profil-img">
+          <div class="profil-name">ManarMagdy</div>
+          <div class="profil-detalis">
+          <span class="num">5</span> 
+          </div>
+          <div class="number-of-plants">
+          Plants
+          </div>
+          <div class="mail">
+             ManarMagdy2020@gmail.com
+          </div>
+        </div>
+
+      <!-- Plants div -->
+      
+      <div class="plants-parent">
+        <h2>My Plants</h2>
+        <div class="my-plants">
+          <div class="plant">
+            <div class="img-container">
+              <img src="../assets/images/cat3.jpg" alt="plant">
+              <div class="plant_name">Tulips</div>
+            </div>
+            <div class="remove_btn" role="button">
+             <button>remove</button> 
+            </div>
+          </div>
+          <div class="plant">
+            <div class="img-container">
+              <img src="../assets/images/cat4.jpg" alt="plant">
+              <div class="plant_name">Mint</div>
+            </div>
+            <div class="remove_btn" role="button">
+              <button> remove</button>
+            </div> 
+          </div>
+          <div class="plant">
+            <div class="img-container">
+              <img src="../assets/images/cat3.jpg" alt="plant">
+              <div class="plant_name">Tulips</div>
+            </div>
+            <div class="remove_btn" role="button">
+             <button>remove</button> 
+            </div>
+          </div>
+        
+        </div>
+
+
+        
+        <div class="my-plants">
+          <div class="plant">
+            <div class="img-container">
+              <img src="../assets/images/cat3.jpg" alt="plant">
+              <div class="plant_name">Tulips</div>
+            </div>
+            <div class="remove_btn" role="button">
+             <button>remove</button> 
+            </div>
+          </div>
+          <div class="plant">
+            <div class="img-container">
+              <img src="../assets/images/cat4.jpg" alt="plant">
+              <div class="plant_name">Mint</div>
+            </div>
+            <div class="remove_btn" role="button">
+              <button> remove</button>
+            </div> 
+          </div>
+          <div class="plant">
+            <div class="img-container">
+              <img src="../assets/images/cat3.jpg" alt="plant">
+              <div class="plant_name">Tulips</div>
+            </div>
+            <div class="remove_btn" role="button">
+             <button>remove</button> 
+            </div>
+          </div>
+
+          
+          
+          </div>
+        
+        </div>
       </div>
-    </div>
-  </body>
+      </div>
+   </body>
 </html>
