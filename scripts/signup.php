@@ -26,14 +26,54 @@ ____For any help to use functions in functionality.php contact me____
 
 With my best wishes...
     Muhammed Abdullsalam
-
 */
+
+include 'database.php';
+include 'functionality.php';
+
+
+if (isset($_POST['username'])) {
+
+    $username = sanInput($_POST['username']);
+    $email = sanInput($_POST['email']);
+    $password = sanInput($_POST['password']);
+    $cpassword = sanInput($_POST['cpassword']);
+    $birth_date = sanInput($_POST['birth_date']) . ' 00:00:00';
+    $create_date = date('Y-m-d H:i:s', time());
+    $gender = sanInput($_POST['gender']);
+
+    if ($password == $cpassword) {
+
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        $sql = "SELECT * FROM users WHERE email=?";
+        $rows = executeSQL($conn, $sql, 's', $email);
+        if (count($rows)) {
+            echo "<script>alert('Woops! Email Already Exists.')</script>";
+        } else {
+            do {
+                $user_id = genId(9);
+                $query = "SELECT user_id FROM users WHERE user_id = ?";
+                $rows = executeSQL($conn, $query, 'i', $user_id);
+            } while (count($rows));
+
+            $sql = "INSERT INTO users (user_id ,username, email, password)
+			VALUES (?, ?, ?, ?)";
+            $rows = executeSQL($conn, $sql, 'isss', $user_id, $username, $email, $password);
+            $expire = time() + (60 * 60 * 24 * 14);
+            setcookie('planta_user_id', $user_id, $expire);
+        }
+    } else {
+        echo "<script>alert('Password Not Matched.')</script>";
+    }
+}
 
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,9 +85,10 @@ With my best wishes...
     <link rel="stylesheet" href="../remixIcons/remixicon.css">
     <link rel='stylesheet' href='../fontawesome/css/all.min.css'>
 </head>
+
 <body>
-    <?php 
-        require_once("header.php");
+    <?php
+    require_once("header.php");
     ?>
 
     <div class="login-form-container">
@@ -55,16 +96,16 @@ With my best wishes...
             <h3> Sign up </h3>
             <div>
                 <span>Username</span>
-                <input type="text" name="username"  class="box" placeholder="Enter a username" required pattern="\w*[_-]*">
+                <input type="text" name="username" class="box" placeholder="Enter a username" required pattern="\w*[_-]*">
             </div>
             <div>
                 <span>Email</span>
-                <input type="email" name="email"  class="box" placeholder="Enter your email" required>
+                <input type="email" name="email" class="box" placeholder="Enter your email" required>
             </div>
             <div>
                 <span>Password</span>
                 <input type="password" name="password" class="box" placeholder="Enter your password" required minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+"><br>
-                <input type="password" name="confirm_password" class="box" placeholder="Confirm your password" required minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+">
+                <input type="password" name="cpassword" class="box" placeholder="Confirm your password" required minlength="3" maxlength="12" pattern="\w*[*.!@$%^&,.?/~_+-=|]+">
             </div>
             <div>
                 <span>Date of birth</span>
@@ -74,30 +115,31 @@ With my best wishes...
                 </div>
             </div>
             <div class="gender">
-                    <!-- Gender -->
-                    <span>Gender</span>
-                    <div class="male">
-                        <label><i class="fa fa-male"></i> Male</label>
-                        <input name="gender" type="radio" value="M" required >
-                    </div>
-                    <div class="fe male">
-                        <label><i class="fa fa-female"></i> Female</label>
-                        <input name="gender" type="radio" value="F" required>
-                    </div>
+                <!-- Gender -->
+                <span>Gender</span>
+                <div class="male">
+                    <label><i class="fa fa-male"></i> Male</label>
+                    <input name="gender" type="radio" value="M" required>
+                </div>
+                <div class="fe male">
+                    <label><i class="fa fa-female"></i> Female</label>
+                    <input name="gender" type="radio" value="F" required>
+                </div>
 
-                    <div class="clear"></div>
+                <div class="clear"></div>
 
             </div>
             <input type="submit" value="sign Up" class="btn">
-            <p>Have an account? <a href="signin.php">Sign in</a></p>
         </form>
     </div>
+    <script src="change_logo_path.js"></script>
 </body>
+
 </html>
 
 <?php
 
 // Close db Connection
-    mysqli_close($conn);
+mysqli_close($conn);
 
 ?>
