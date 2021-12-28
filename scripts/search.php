@@ -38,13 +38,18 @@
             <a href='#'><i class='fab fa-instagram'></i></a>
             <a href='#'><i class='fab fa-linkedin'></i></a>
         </div>
+        <div class="logout">
+            <a href="logout.php">Log out</a>
+        </div>
     </div>
 
     <div class=" header-2">
         <a href="../index.php" class="logo"><i class="ri-leaf-line"></i> Planta</a>
 
         <form action="search.php" method="post" class="search-bar-container">
-            <input type="search" name="search" id="search-bar" placeholder="search here...">
+            <input type="search" name="search" id="search-bar" value="<?php 
+                    if(isset($search_for))
+                        echo trim($search_for, '%');?>" placeholder="search here...">
             <label for ="search-submit"><i class="fas fa-search"></i></label>
             <input type="submit" id="search-submit">
         </form>
@@ -52,7 +57,7 @@
 
     <div class="header-3">
         <nav class="navbar">
-            <a href="#home"> Home</a>
+            <a href="../index.php"> Home</a>
             <a href="#category"> Category</a>
             <a href="#fertilize"> Fertilize</a>
             <a href="#contact"> Contact</a>

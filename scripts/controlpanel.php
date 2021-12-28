@@ -177,6 +177,7 @@
                         <h2>Create Plant</h2>
                         <form action="CPanel_scripts/create-plant.php" name="create-plant" method="post">
                             <input type="text" name="plant_name" placeholder="Plant Name" required>
+                            <input type="text" name="img_path" placeholder="Image Path">
                             <textarea name="info" rows="3" cols="30" placeholder="Information" required></textarea>
                             <input type="submit" value="Create">
                         </form>
@@ -186,6 +187,7 @@
                         <h2>Create Article</h2>
                         <form action="CPanel_scripts/create-article.php" name="create-article" method="post">
                             <input type="text" name="title" placeholder="Title" required>
+                            <input type="text" name="img_path" placeholder="Image Path">
                             <textarea name="content" rows="3" cols="30" placeholder="Content" required></textarea>
                             <input type="number" name="plant_id" placeholder="Plant_ID" max="999999999" min="1" required>
                             <input type="submit" value="Create">
@@ -220,6 +222,7 @@
                         <form action="CPanel_scripts/update-plant.php" name="update-plant" method="post">
                             <input type="number" name="plant_id" placeholder="ID" max="999999999" min="1" required>
                             <input type="text" name="plant_name" placeholder="Plant Name" required>
+                            <input type="text" name="img_path" placeholder="Image Path">
                             <textarea name="info" rows="3" cols="30" placeholder="Information" required></textarea>
                             <input type="submit" value="Update">
                         </form>
@@ -230,6 +233,7 @@
                         <form action="CPanel_scripts/update-article.php" name="update-article" method="post">
                             <input type="number" name="article_id" placeholder="ID" max="999999999" min="1" required>
                             <input type="text" name="title" placeholder="Title" required>
+                            <input type="text" name="img_path" placeholder="Image Path">
                             <textarea name="content" rows="3" cols="30" placeholder="Content" required></textarea>
                             <input type="number" name="plant_id" placeholder="Plant_ID" max="999999999" min="1" required>
                             <input type="submit" value="Update">
@@ -274,7 +278,6 @@
     </main>
 
     <script src="toggle-nav.js"></script>
-    <script src="change_logo_path.js"></script>
     <!-- <script src="highlight_active_link.js"></script> -->
 </body>
 </html>

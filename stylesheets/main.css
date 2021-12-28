@@ -159,6 +159,14 @@ section{
 .header-1 a:hover{
     color:yellow;
 }
+.header-1 .logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-1 .logout a{
+    font-size: 17px;
+}
 .header-2 .logo{
     font-weight:bolder;
     font-size:4rem;

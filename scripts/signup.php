@@ -84,14 +84,14 @@ With my best wishes...
                         <label><i class="fa fa-female"></i> Female</label>
                         <input name="gender" type="radio" value="F" required>
                     </div>
-                    
+
                     <div class="clear"></div>
 
             </div>
             <input type="submit" value="sign Up" class="btn">
+            <p>Have an account? <a href="signin.php">Sign in</a></p>
         </form>
     </div>
-    <script src="change_logo_path.js"></script>
 </body>
 </html>
 

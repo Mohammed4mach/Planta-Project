@@ -60,7 +60,6 @@ With my best wishes...
             <p>Don't have account? <a href="signup.php">Create one</a></p>
         </form>
     </div>
-    <script src="change_logo_path.js"></script>
 </body>
 </html>
 

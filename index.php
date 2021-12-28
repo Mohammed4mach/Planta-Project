@@ -22,7 +22,7 @@
 
     <div class="header-3">
         <nav class="navbar">
-            <a href="#home"> Home</a>
+            <a href="index.php"> Home</a>
             <a href="#category"> Category</a>
             <a href="#fertilize"> Fertilize</a>
             <a href="#contact"> Contact</a>
@@ -43,21 +43,22 @@
 
             <div class="swiper plants-slider">
                 <div class="swiper-wrapper">
-                <a href="#" class="swiper-slide"><img src="assets/images/cat2.jpg" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="assets/images/cat3.jpg" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="assets/images/cat4.jpg" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="assets/images/cat1.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="assets/images/cat2.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="assets/images/cat3.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="assets/images/cat4.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="assets/images/cat1.jpg" alt=""></a>
                 </div>
-                    <img src="assets/images/stand.png" class="stand" alt="">
+                <img src="assets/images/stand.png" class="stand" alt="">
             </div>
         </div>
-            
+
     </section>
 
     <!--end -->
 
+        <script src="scripts/change_logo_path.js"></script>
         <script src="scripts/swiper-bundle.min.js"></script>
-        <!-- link file-->
         <script src="scripts/img-swiper.js"></script>
+        
     </body>
 </html>
