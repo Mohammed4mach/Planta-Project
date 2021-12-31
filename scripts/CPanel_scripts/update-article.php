@@ -14,4 +14,5 @@
         executeSQL($conn, $sql, 'ssii', $title, $content, $plant_id, $article_id);
         header('Location:../controlpanel.php#update-panel');
     }
-?>
+
+    mysqli_close($conn);

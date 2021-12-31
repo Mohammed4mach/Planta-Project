@@ -11,4 +11,5 @@
         executeSQL($conn, $sql, 'i', $plant_id);
         header('Location:../controlpanel.php#delete-panel');
     }
-?>
+
+    mysqli_close($conn);

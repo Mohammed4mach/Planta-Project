@@ -35,4 +35,4 @@
         header('Location:../controlpanel.php#create-panel');
     }
 
-?>
+    mysqli_close($conn);

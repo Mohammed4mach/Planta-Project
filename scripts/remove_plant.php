@@ -9,7 +9,7 @@
         $user_id = sanInput($_COOKIE['planta_user_id']);
         $plant_id = sanInput($_GET['plant_id']);
 
-        $sql = 'INSERT INTO interests (user_id, plant_id) VALUES (?, ?)';
+        $sql = 'DELETE FROM interests WHERE user_id = ? AND plant_id = ?';
         executeSQL($conn, $sql, 'ii', $user_id, $plant_id);
 
         header('Location:profile.php');

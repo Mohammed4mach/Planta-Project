@@ -44,6 +44,10 @@
 /* End scroll-bar */
 
 
+img
+{
+    object-fit: cover;
+}
 
 a, .logo i{
     transition: color 0.3s ease,

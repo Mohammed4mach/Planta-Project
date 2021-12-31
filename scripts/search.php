@@ -38,9 +38,15 @@
             <a href='#'><i class='fab fa-instagram'></i></a>
             <a href='#'><i class='fab fa-linkedin'></i></a>
         </div>
-        <div class="logout">
-            <a href="logout.php">Log out</a>
-        </div>
+        <?php
+            if(isset($_COOKIE['planta_user_id']))
+            {
+                echo '
+                <div class="logout">
+                    <a href="logout.php">Log out</a>
+                </div>';
+            }
+        ?>
     </div>
 
     <div class=" header-2">
@@ -58,9 +64,9 @@
     <div class="header-3">
         <nav class="navbar">
             <a href="../index.php"> Home</a>
-            <a href="#category"> Category</a>
-            <a href="#fertilize"> Fertilize</a>
-            <a href="#contact"> Contact</a>
+            <a href="coming_soon.php"> Category</a>
+            <a href="coming_soon.php"> Fertilize</a>
+            <a href="coming_soon.php"> Contact</a>
         </nav>
         <div class="icons">
             <a href="signin.php"><i class ="fas fa-user"></i></a>
@@ -84,10 +90,11 @@
                             "
                                 <div class='plant'>
                                     <img src='" . $row['img_path'] . "' alt='" . $row['plant_name'] . "'>
-                                    <a href='plant.php?plant_id=" . $row['plant_id'] . "'>" . $row['plant_name'] . "</a>
-                                    <form action='add_plant.php' method='post'>
-                                        <input type='number' value='" . $row['plant_id'] . "' disabled>
+                                    <form action='add_plant.php' method='get'>
+                                        <label class='id_label' for='". $row['plant_id'] ."'>" . $row['plant_name'] . "</label><br>
+                                        <input type='number' name='plant_id' value='" . $row['plant_id'] . "' class='plant_id' readonly>
                                         <input class='btn' type='submit' value='Add'>
+                                        <input formaction='plant.php' type='submit' class='labeled_submit' id='". $row['plant_id'] ."'>
                                     </form>
                                 </div>
                             ";
@@ -98,7 +105,6 @@
     </div>
 </body>
 </html>
-
 
 
     <?php

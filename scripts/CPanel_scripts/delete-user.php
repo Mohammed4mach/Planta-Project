@@ -10,3 +10,5 @@
         executeSQL($conn, $sql, 'i', $user_id);
         header('Location:../controlpanel.php#delete-panel');
     }
+
+    mysqli_close($conn);

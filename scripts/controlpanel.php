@@ -3,12 +3,39 @@
     require_once 'database.php';
     require_once 'functionality.php';
 
+    if(!isset($_COOKIE['planta_user_id']))
+    {
+        header('Location:signin.php');
+        exit();
+    }
+
+    // Fetch admin data
+    $sql = "SELECT img_path, admin FROM users WHERE user_id = ?";
+    $admin_id = sanInput($_COOKIE['planta_user_id']);
+    $row = executeSQL($conn, $sql, 'i', $admin_id);
+    $is_admin = $row[0]['admin'];
+    // Set user-img placeholder
+    if(is_null($row[0]['img_path']))
+        $admin_img_path = '../uploads/users-img/user-icon-placeholder.png';
+    else
+        $admin_img_path = $row[0]['img_path'];
+
+    if(!$is_admin)
+    {
+        header('Location:profile.php');
+        exit();
+    }
+
+
+    // Fetch users data
     $sql = "SELECT * FROM users ORDER BY admin DESC";
     $users_rows = executeSQL($conn, $sql);
 
+    // Fetch plants data
     $sql = "SELECT * FROM plants ORDER BY plant_name ASC";
     $plants_rows = executeSQL($conn, $sql);
 
+    // Fetch articles data
     $sql = "SELECT * FROM articles ORDER BY title ASC";
     $articles_rows = executeSQL($conn, $sql);
 
@@ -43,7 +70,7 @@
             <span> Admin Panel</span>
         </div>
         <div class="user-prime">
-            <a href="profile.php"><img src="../uploads/users-img/admin.png" alt="User image"></a><!-- Admin info -->
+            <a href="profile.php"><img src="<?php echo $admin_img_path; ?>" alt="User image"></a><!-- Admin info -->
         </div>
     </header>
 
@@ -78,13 +105,17 @@
                         {
                             foreach($users_rows as $row)
                             {
+                                // Fetch number of user plant
+                                $sql = "SELECT plant_id FROM interests WHERE user_id = " . $row['user_id'];
+                                $user_plants_number = count(executeSQL($conn, $sql));
+
                                 echo "<tr>";
                                 echo "<th>" . $row['user_id'] . "</th>";
                                 echo "<td>" . $row['username'] . "</td>";
                                 echo "<td>" . $row['email'] . "</td>";
                                 echo "<td>" . $row['gender'] . "</td>";
                                 echo "<td>" . calcAge($row['birth_date']) . "</td>";
-                                echo "<td>-</td>";
+                                echo "<td>$user_plants_number</td>";
                                 echo "</tr>";
                             }
                         }
@@ -109,11 +140,15 @@
                         {
                             foreach($plants_rows as $row)
                             {
+                                // Fetch number of interested users
+                                $sql = "SELECT user_id FROM interests WHERE plant_id = " . $row['plant_id'];
+                                $interested_users_number = count(executeSQL($conn, $sql));
+
                                 echo "<tr>";
                                 echo "<th>" . $row['plant_id'] . "</th>";
                                 echo "<td>" . $row['plant_name'] . "</td>";
                                 echo "<td>-</td>";
-                                echo "<td>-</td>";
+                                echo "<td>$interested_users_number</td>";
                                 echo "</tr>";
                             }
                         }

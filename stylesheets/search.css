@@ -62,23 +62,29 @@
     margin-bottom: 15px;
   }
 
-  .plant input:disabled
+  .plant input.plant_id
+  {
+    display: none;
+  }
+
+  .labeled_submit
   {
     display: none;
   }
 
   .plant img{
     width: 100%;
+    height: 245px;
     border: 1px solid #4442;
     border-radius: 5px;
     min-height: 210px;
   }
-  .plant a
+  label.id_label
   {
-    /* color: #0029; */
     color:seashell ;
+    cursor: pointer;
   }
-  .plant a:hover
+  .id_label:hover
   {
     color: rgb(247, 227, 188);
   }
@@ -102,7 +108,6 @@
   cursor: pointer;*/
   border-radius: 38px;
   padding: 5px;
-  margin-left: 23px;
   height:60px ;
   width: 140px;
   font-weight: bold;

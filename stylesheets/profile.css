@@ -1,61 +1,110 @@
-/*--green:#3A9943;
-    --color:#56c596;
-    --color-2:#f4f1e9;
-*/
-
-
-.header-1{
-    width:100%;
-    height: 30%;
-    /*margin-bottom: 20px;*/
-    position:sticky;
-    top:0;
+h2{
+    font-family: 'Vidaloka', serif;
+    font-size: 50px;
+    color: #555e;
+    margin-bottom: 30px;
 }
-.profil-img{
-    width:150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius:50% ;
-    margin:0 AUTO 20PX AUTO;
-}
-
-
-
 .profil{
     font-family: sans-serif;
-    text-align: center;
-    width: 400px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     padding: 30px;
     margin-left: 20px;
     margin-top: 30px;
-    margin-right: 20px;
+    margin-bottom: 50px;
     font-size: 2em;
     border-radius: 5px;
-    height: 500px;
+    width: 333px;
+    height: 480px;
     position:sticky;
-    top: 20%;
-    
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+.profil > *
+{
+    margin-bottom: 4px;
+}
+
+.profil-img-container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.profil-img, #upload-img
+{
+    width:150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius:50%;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+#upload-img { display: none; }
+.profil-img:hover ~ #upload-img
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#upload-img:hover
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgba(50, 50, 50, 0.4);
+}
+#upload-img form
+{
+    position: relative;
+    top: 20px;
+}
+#upload-img input[type="submit"]
+{
+    background: none;
+    color: #fffd;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #fff5;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+label[for="file_upload"]
+{
+    width: 100%;
+    font-size: 39px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#file_upload { display: none; }
+
 
 
 .profil-name{
-    margin-bottom:10px;
     font-weight: bold ;
     font-size:1.5em;
     font-family: 'Lobster', cursive;
     font-style: italic;
-    
 }
 
-    
+.plant input.plant_id
+{
+display: none;
+}
 
 .num{
     font-size: 1.3em;
-    margin-left: 30px;
-}
-.number-of-plants{
-    margin-left: 0px;
 }
 
 .mail{
@@ -63,69 +112,48 @@
     margin-top: 50px;
 }
 
-
-
-span{
-    margin-right: 40px;
-    margin-left: 10px;
-}
-
 /* Styling plants divs */
 .my-plants {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-   /* font-family: 'Lobster Two', cursive;*/
-    flex-grow: 1;
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
 }
 
- .myplants .plant {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 10px solid #3A9943;
-    margin-right: 100px;
-    justify-content: space-between;
-    align-content: space-between;
-    margin: 50px;
-}
  
-    
-
-    
- 
-
-.myplants .plant .img-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-right: 20px;
-    align-content: space-between;
-   
-    
+.plant{
+  border-radius: 5px;
+  margin-bottom: 40px;
+  justify-self: center;
+  /*border: 2px solid #3332;*/
+  background-color:#3A9943 ;
+  /*font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  width: 82%;
+  height: 390px;
+ /* box-shadow: 5px 5px 20px #4447 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-.plant .img-container img {
-    width: 175px;
-    height: 175px;
-    object-fit: cover;
-    margin: 25px 25px 5px 25px;
-    align-content: space-between;
+
+.plant img{
+    width: 100%;
+    height: 245px;
+    border: 1px solid #4442;
     border-radius: 5px;
-
+    min-height: 210px;
+    /* object-fit: initial; */
 }
 .plants-parent {
+    width: 71%;
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: space-between;
-    
-   
-
 }
 .container {
     display: flex;
@@ -133,52 +161,95 @@ span{
 
 }
 
-h2{
-    font-family: 'Vidaloka', serif;
+
+.plant > *
+{
     text-align: center;
-    
-    margin-bottom: 100px;
-    font-size: 50px; 
-}
-.plant{
-    margin:50px; 
-    background-color:#3A9943;
-    border-radius: 5px;
-    height: 292px;
-    width: 223px;
-}   
-button{
-    border-radius: 20px;
-    padding: 5px;
-    margin-left: 35%;
-    height:40px ;
-    width: 70px;
-    font-weight: bold;
-    cursor: pointer;
-    transform: translate3d(-50% ,-50%);
-    background-color: seashell;
-    box-shadow: 0 5px 0 #e6e3da , 0 5px 15px#e6e3da ;
-    
-}
-button:hover{
-    color: white;
-    background-color: rgb(182, 46, 21);
-    box-shadow: 0 5px 0 rgb(182, 46, 21) , 0 5px 15px rgb(182, 46, 21) ;
+    margin-bottom: 15px;
 }
 
 a:active{
     box-shadow: 0 1px 0 #e6e3da , 0 1px 3px#e6e3da ;
 }
 
-.plant_name{
-    margin-left: 40%;
-    font-size: 1.5em;
-   /* font-style: italic;*/
-    color: seashell;
-    margin-bottom: 5px;
-    
+label.id_label
+{
+    color:seashell;
+    cursor: pointer;
 }
-.remove_btn{
-    transform: translate3d(-50% ,-50%);
+.id_label:hover
+{
+    color: rgb(247, 227, 188);
+}
 
+.labeled_submit
+{
+display: none;
+}
+
+
+input:disabled
+{
+    display: none;
+}
+
+
+.btn{
+  /*background-color: #3A9943;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;*/
+  border-radius: 38px;
+  padding: 5px;
+  height:60px;
+  width: 140px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: seashell;
+  box-shadow: 0 9px 0 #e6e3da , 0 9px 19px#e6e3da ;
+  color: black;
+}
+
+.btn:hover{
+    color: white;
+    background-color: rgb(182, 46, 21);
+    box-shadow: 0 5px 0 rgb(182, 46, 21) , 0 5px 15px rgb(182, 46, 21) ;
+}
+
+.plant a
+{
+    /* color: #0029; */
+    color:seashell ;
+}
+.plant a:hover
+{
+    color: rgb(247, 227, 188);
+}
+
+.to_admin_panel
+{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 25px;
+    margin: 5px;
+}
+.to_admin_panel a
+{
+    color: #187721;  
+}
+.to_admin_panel a:hover
+{
+    color: #298832;
+}
+
+#no-result
+{
+  width: 100%;
+  font-size: 30px;
+  color: #999;
+  grid-column: 1/4;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
 }

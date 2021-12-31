@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="remixIcons/remixicon.css">
 
         <script src="fontawesome/js/all.min.js"></script>
-    </head>
-    <body>
+</head>
+<body>
     <?php 
         require_once("scripts/header.php");
     ?>
@@ -23,9 +23,9 @@
     <div class="header-3">
         <nav class="navbar">
             <a href="index.php"> Home</a>
-            <a href="#category"> Category</a>
-            <a href="#fertilize"> Fertilize</a>
-            <a href="#contact"> Contact</a>
+            <a href="scripts/coming_soon.php"> Category</a>
+            <a href="scripts/coming_soon.php"> Fertilize</a>
+            <a href="scripts/coming_soon.php"> Contact</a>
         </nav>
         <div class="icons">
             <a href="scripts/signin.php"><i class ="fas fa-user"></i></a>
@@ -38,7 +38,7 @@
             <div class="content">
                 <h3>Upto 70% Off</h3>
                 <p>Decorate Your Home Now , Make Your Home Green </p>
-                <a href="#" class="btn1">Shop Now</a>
+                <a href="scripts/coming_soon.php" class="btn1">Shop Now</a>
             </div>
 
             <div class="swiper plants-slider">
@@ -53,12 +53,11 @@
         </div>
 
     </section>
-
     <!--end -->
 
         <script src="scripts/change_logo_path.js"></script>
         <script src="scripts/swiper-bundle.min.js"></script>
         <script src="scripts/img-swiper.js"></script>
-        
-    </body>
+
+</body>
 </html>

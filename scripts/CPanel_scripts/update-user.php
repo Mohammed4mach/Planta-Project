@@ -28,4 +28,5 @@
         header('Location:../controlpanel.php#update-panel');
     }
 
-?>
+
+    mysqli_close($conn);

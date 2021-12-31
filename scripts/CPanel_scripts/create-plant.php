@@ -19,4 +19,5 @@
         executeSQL($conn, $sql, 'iss', $plant_id, $plant_name, $info);
         header('Location:../controlpanel.php#create-panel');
     }
-?>
+
+    mysqli_close($conn);

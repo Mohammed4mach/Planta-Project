@@ -21,4 +21,6 @@
         executeSQL($conn, $sql, 'issis', $article_id, $title, $content, $plant_id, $create_date);
         header('Location:../controlpanel.php#create-panel');
     }
+
+    mysqli_close($conn);
 ?>
