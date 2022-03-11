@@ -1,4 +1,4 @@
 # Planta-Project
 
 A Sophomore year project.  
-Plantkeeping and E-commerce website.
+Plantkeeping and soon E-commerce website.
